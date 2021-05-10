@@ -1,0 +1,13 @@
+.section__header {
+    font-size: 15px;
+    font-weight: bold;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 2px;
+}
+
+.section__field {
+    background-color: white;
+    padding: 30px;
+    margin: 0;
+}
