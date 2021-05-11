@@ -1,6 +1,33 @@
 {
     const tasks = [];
 
+    const resetInput = () => {
+    const resetField = document.querySelector(".js-newTask");
+    resetField.value = "";
+
+    resetInput();
+    }
+
+    const addNewTask = (newTaskContent) => {
+        tasks.push({
+            content: newTaskContent,
+        });
+
+        render();
+    };
+
+    const removeTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
+
+        render();
+    }
+
+    const toggleTaskDone = (taskIndex) => {
+        tasks[taskIndex].done = !tasks[taskIndex].done;
+        
+        render();
+    }
+
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
@@ -30,7 +57,7 @@
             <button class="list__button list__button--done js-done>
             ${task.done ? "√" : ""}</button>
             <span class="list__task${task.done ? "list__task--done" : ""}">${task.content}</span>
-            <button class="list__button list__button--remove js-remove> </button>
+            <button class="list__button list__button--remove js-remove>🗑</button>
             </li>
             `;
         }
@@ -40,25 +67,6 @@
         bindEvents();
 
     };
-
-    const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
-
-        render();
-
-    };
-
-    const removeTask = (index) => {
-        tasks.splice(index, 1);
-        render();
-    }
-
-    const toggleTaskDone = (taskIndex) => {
-        tasks[taskIndex].done = !tasks[taskIndex].done;
-        render();
-    }
 
     const onFormSubmit = (event) => {
         event.preventDefault();
