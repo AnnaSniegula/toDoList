@@ -5,7 +5,7 @@
     const resetField = document.querySelector(".js-newTask");
     resetField.value = "";
 
-    resetInput();
+    
     }
 
     const addNewTask = (newTaskContent) => {
@@ -14,6 +14,7 @@
         });
 
         render();
+        resetInput();
     };
 
     const removeTask = (taskIndex) => {
