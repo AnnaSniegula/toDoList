@@ -8,3 +8,11 @@
     text-align: center;
     font-size: 15px;
 }
+
+.list__button--remove {
+    background-color:  red;
+}
+
+.list__button--done {
+    background-color:  green;
+}
