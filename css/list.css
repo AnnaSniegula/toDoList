@@ -1,5 +1,11 @@
 .list__item {
     border-bottom: 1px, solid, #eee ;
+    display: grid;
+    align-items: center;
+    padding: 5px;
+    grid-template-columns: 30px 1fr 30px;
+    grid-gap: 15px;
+}
 }
 
 .list__task--done {
@@ -16,7 +22,7 @@
     border: none;
     color: white;
     margin: 5px;
-  
+    text-align: center;
 }
 
 .list__button--remove {
