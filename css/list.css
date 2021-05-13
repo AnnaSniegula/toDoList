@@ -6,7 +6,6 @@
     grid-template-columns: 30px 1fr 30px;
     grid-gap: 15px;
 }
-}
 
 .list__task--done {
     text-decoration: line-through;
