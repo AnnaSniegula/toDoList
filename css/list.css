@@ -1,5 +1,5 @@
 .list__item {
-    border-bottom: 1px, solid, #eee ;
+    border-bottom: 1px solid #eee ;
     display: grid;
     align-items: center;
     padding: 5px;
