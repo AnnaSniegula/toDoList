@@ -15,6 +15,12 @@ margin: 2px;
     justify-content: space-between;
 }
 
+@media(max-width:767px){
+.form__fieldset {
+    flex-direction: column;
+}
+
+}
 .form__fieldset--input {
     border: 2px solid #eee;
     padding: 10px;
