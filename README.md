@@ -17,7 +17,7 @@ toDoList is an apllication created to hepl you organize every day tasks. It is e
 
 ## Prewiev
 
-
+![prewiev of application](images/Animation.gif)
 
 ## Technology used to build this page
 
