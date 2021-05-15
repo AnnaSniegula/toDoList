@@ -1,5 +1,5 @@
 .list__item {
-    border-bottom: 1px solid #eee ;
+    border-bottom: 1px solid hsl(0, 0%, 93%) ;
     display: grid;
     align-items: center;
     padding: 5px;
@@ -19,15 +19,15 @@
     width: 30px;
     height: 30px;
     border: none;
-    color: white;
+    color: hsl(0, 0%, 100%);
     margin: 5px;
     text-align: center;
 }
 
 .list__button--remove {
-    background-color:  red;
+    background-color:  hsl(0, 100%, 50%);
 }
 
 .list__button--done {
-    background-color:  green;
+    background-color:  hsl(120, 100%, 25%);
 }
