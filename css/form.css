@@ -1,5 +1,5 @@
 
-.form__fieldset {
+.form {
     background-color: hsl(0, 0%, 100%);
     border: 0px;
     padding: 20px;
@@ -8,7 +8,7 @@
 }
 
 @media(max-width:767px){
-.form__fieldset {
+.form {
     flex-direction: column;
 }
 }
