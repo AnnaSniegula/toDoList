@@ -2,10 +2,15 @@
     const tasks = [];
 
     const resetInput = () => {
-    const resetField = document.querySelector(".js-newTask");
-    resetField.value = "";
+        const resetField = document.querySelector(".js-newTask");
+        resetField.value = "";
+    }
 
-    
+    const focusInput = () => {
+        const newTaskFocus = document.querySelector(".js-newTask").focus();
+        if (newTaskFocus === "") {
+            newTaskFocus.focus()
+        }
     }
 
     const addNewTask = (newTaskContent) => {
@@ -15,6 +20,7 @@
 
         render();
         resetInput();
+        focusInput();
     };
 
     const removeTask = (taskIndex) => {
@@ -25,7 +31,7 @@
 
     const toggleTaskDone = (taskIndex) => {
         tasks[taskIndex].done = !tasks[taskIndex].done;
-        
+
         render();
     }
 
@@ -56,10 +62,13 @@
             htmlString += `
             <li class="list__item">
             <button class="list__button list__button--done js-done">
-            ${task.done ? "✓" : ""}</button>
+            ${task.done ? "✓" : ""}
+            </button>
             <span class="list__task${task.done ? " list__task--done" : ""}">
-            ${task.content}</span>
-            <button class="list__button list__button--remove js-remove">🗑</button>
+            ${task.content}
+            </span>
+            <button class="list__button list__button--remove js-remove">🗑
+            </button>
             </li>
               `
         };
