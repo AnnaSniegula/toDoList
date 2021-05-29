@@ -21,6 +21,18 @@
         focusInput();
     };
 
+    const markAllTasksDone = () => {
+        tasks = tasks.map((task) => ({
+            ...task,
+            done: true,
+        }));
+        render();
+    };
+
+    const toggelHideDoneTasks = () => {
+        hideDoneTasks = !hideDoneTasks
+    };
+
     const removeTask = (taskIndex) => {
         tasks = [
             ...tasks.slice(0, taskIndex),
