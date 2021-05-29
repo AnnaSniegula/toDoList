@@ -30,7 +30,8 @@
     };
 
     const toggelHideDoneTasks = () => {
-        hideDoneTasks = !hideDoneTasks
+        hideDoneTasks = !hideDoneTasks;
+        render();
     };
 
     const removeTask = (taskIndex) => {
@@ -75,12 +76,9 @@
         });
     }
 
-    const render = () => {
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += `
-            <li class="list__item">
+    const renderTasks = () => {
+        const taskToHTML = task => `
+            <li class="list__item${task.done && hideDoneTasks ? " list__item--hidden" : ""}">
             <button class="list__button list__button--done js-done">
             ${task.done ? "✓" : ""}
             </button>
@@ -91,9 +89,10 @@
             </button>
             </li>
               `
-        };
+            ;
 
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+        const tasksElement = document.querySelector(".js-tasks");
+        tasksElement.innerHTML = tasks.map(taskToHTML).join("");
 
         bindEvents();
 
