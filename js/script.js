@@ -46,9 +46,9 @@
         const task = tasks[taskIndex];
 
         tasks = [
-            tasks.slice(0, taskIndex),
-            { ...task, done: !task.done },
-            ...task.slice(taskIndex + 1),
+            ...tasks.slice(0, taskIndex),
+            { ...tasks[taskIndex], done: !tasks[taskIndex].done },
+            ...tasks.slice(taskIndex + 1),
         ];
         render();
     };
@@ -62,17 +62,19 @@
             });
 
         });
-
-        const bindToggleDone = () => {
-        const toggleDoneButtons = document.querySelectorAll(".js-done");
-
-        toggleDoneButtons.forEach((toggleDoneButton, index) => {
-            toggleDoneButton.addEventListener("click", () => {
-                toggleTaskDone(index);
-            });
-
-        });
     };
+            
+    //     const bindToggleDone = () => {
+    //     const toggleDoneButtons = document.querySelectorAll(".js-done");
+
+    //     toggleDoneButtons.forEach((toggleDoneButton, index) => {
+    //         toggleDoneButton.addEventListener("click", () => {
+    //             toggleTaskDone(index);
+    //         });
+
+    //     });
+        
+    // };
 
     const renderTasks = () => {
         const taskToHTML = task => `
@@ -92,7 +94,7 @@
         const tasksElement = document.querySelector(".js-tasks");
         tasksElement.innerHTML = tasks.map(taskToHTML).join("");
 
-        bindEvents();
+       
 
     };
 
@@ -129,7 +131,8 @@
     };
 
     const render = () => {
-        bindToggleDone();
+        bindEvents();
+       
         renderTasks();
         renderButtons();
         bindButtonsEvents();
