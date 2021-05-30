@@ -63,6 +63,7 @@
 
         });
 
+        const bindToggleDone = () => {
         const toggleDoneButtons = document.querySelectorAll(".js-done");
 
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
@@ -71,7 +72,7 @@
             });
 
         });
-    }
+    };
 
     const renderTasks = () => {
         const taskToHTML = task => `
@@ -128,6 +129,7 @@
     };
 
     const render = () => {
+        bindToggleDone();
         renderTasks();
         renderButtons();
         bindButtonsEvents();
