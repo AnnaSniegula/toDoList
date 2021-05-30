@@ -26,6 +26,7 @@
     color: hsl(0, 0%, 100%);
     margin: 5px;
     text-align: center;
+    transition: background 0.3s;
 }
 
 .list__button--remove {
