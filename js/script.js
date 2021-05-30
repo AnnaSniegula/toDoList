@@ -43,8 +43,6 @@
     }
 
     const toggleTaskDone = (taskIndex) => {
-        const task = tasks[taskIndex];
-
         tasks = [
             ...tasks.slice(0, taskIndex),
             { ...tasks[taskIndex], done: !tasks[taskIndex].done },
@@ -53,7 +51,7 @@
         render();
     };
 
-    const bindEvents = () => {
+    const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
         removeButtons.forEach((removeButton, index) => {
@@ -63,18 +61,18 @@
 
         });
     };
-            
-    //     const bindToggleDone = () => {
-    //     const toggleDoneButtons = document.querySelectorAll(".js-done");
 
-    //     toggleDoneButtons.forEach((toggleDoneButton, index) => {
-    //         toggleDoneButton.addEventListener("click", () => {
-    //             toggleTaskDone(index);
-    //         });
+    const bindToggleDone = () => {
+        const toggleDoneButtons = document.querySelectorAll(".js-done");
 
-    //     });
-        
-    // };
+        toggleDoneButtons.forEach((toggleDoneButton, index) => {
+            toggleDoneButton.addEventListener("click", () => {
+                toggleTaskDone(index);
+            });
+
+        });
+
+    };
 
     const renderTasks = () => {
         const taskToHTML = task => `
@@ -94,7 +92,7 @@
         const tasksElement = document.querySelector(".js-tasks");
         tasksElement.innerHTML = tasks.map(taskToHTML).join("");
 
-       
+
 
     };
 
@@ -110,7 +108,7 @@
         <button class="buttons__button js-toggleHideDoneTasks">
         ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone </button>
         <button class="buttons__button js-markAllDone"
-        ${tasks.every(({ done }) => done) ? " disabled" : ""}>
+        ${tasks.every(({ done }) => done) ? "disabled" : ""}>
         Ukończ wszytkie
         </button>
         `;
@@ -131,10 +129,11 @@
     };
 
     const render = () => {
-        bindEvents();
-       
         renderTasks();
         renderButtons();
+
+        bindToggleDone();
+        bindRemoveEvents();
         bindButtonsEvents();
     };
 
