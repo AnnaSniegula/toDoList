@@ -24,14 +24,15 @@
     background-color: hsl(180, 100%, 25%);
     color: hsl(0, 0%, 100%);
     padding: 10px;
-    border: 0px;
+    border: none;
     font-size: 15px;
     margin: 10px;
-    transition: 0.3s;
+    transition: color 0,3s;
 }
 
 .form__button:hover {
     background-color: hsl(180, 100%, 29%);
+    transform: scale(1.1);
 }
 
 .form__button:active {
