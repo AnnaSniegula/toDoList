@@ -1,6 +1,7 @@
 .section{
     background-color: white;
-    margin-bottom: 2px;
+    margin-bottom: 10px;
+   
 }
 
 .section__header{
@@ -21,11 +22,17 @@
 
 
 .section__title {
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
-    background-color: hsl(0, 0%, 100%);
-    padding: 20px 15px;
+    padding: 30px;
     margin-bottom: 2px;
+    border-bottom: 2px solid hsl(0, 0%, 93%);
+}
+
+.section__title--tasks {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px 20px; 
 }
 
 .section__field {
