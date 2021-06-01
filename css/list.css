@@ -26,13 +26,22 @@
     color: hsl(0, 0%, 100%);
     margin: 5px;
     text-align: center;
-    transition: background 0.3s;
+    transition: color 0.3s;
 }
 
 .list__button--remove {
     background-color:  hsl(0, 100%, 50%);
 }
 
+.list__button--remove:hover {
+    background-color:  hsl(0, 100%, 60%);
+}
+
+
 .list__button--done {
     background-color:  hsl(120, 100%, 25%);
+}
+
+.list__button--done:hover {
+    background-color:  hsl(120, 100%, 35%);
 }
