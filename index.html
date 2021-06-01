@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista zadań</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/body.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
+    <link href="css/list.css" rel="stylesheet">
+    <link href="css/button.css" rel="stylesheet">
+    <link rel="icon" href="images/notebook.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+    <script defer src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+    <main class="main">
+        <header>
+            <h1>
+                Lista zadań</h1>
+        </header>
+        <section class="section">
+            <h1 class="section__title">Dodaj nowe zadanie</h1>
+            <form class="form js-form">
+                <input class="form__input js-newTask" type="text" placeholder="Co jest do zrobienia?">
+                <button class="form__button">Dodaj zadanie</button>
+            </form>
+        </section>
+
+        <section class="section">
+            <header class="section__header">
+                <h1 class="section__title--tasks">Lista zadań</h1>
+                <div class="buttons__button js-button"></div>
+            </header>
+            <ul class="section__field js-tasks">
+            </ul>
+
+
+        </section>
+    </main>
+</body>
+
+</html>
