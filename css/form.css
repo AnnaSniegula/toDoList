@@ -28,7 +28,7 @@
     font-size: 15px;
     margin: 10px;
     cursor: pointer;
-    transition: 0,5s;
+    transition: 0.5s linear;
 }
 
 .form__button:hover {
