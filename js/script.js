@@ -3,8 +3,8 @@
     let hideDoneTasks = false;
 
     const resetInput = () => {
-        const resetField = document.querySelector(".js-newTask");
-        resetField.value = "";
+        const newTaskElement = document.querySelector(".js-newTask");
+        newTaskElement.value = "";
     }
 
     const focusInput = () => {
@@ -97,14 +97,14 @@
     };
 
     const renderButtons = () => {
-        const buttonsElement = document.querySelector(".js-button");
+        const buttonsContainer = document.querySelector(".js-button");
 
         if (!tasks.length) {
-            buttonsElement.innerHTML = "";
+            buttonsContainer.innerHTML = "";
             return;
         }
 
-        buttonsElement.innerHTML = `
+        buttonsContainer.innerHTML = `
         <button class="buttons__button js-toggleHideDoneTasks">
         ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone </button>
         <button class="buttons__button js-markAllDone"
